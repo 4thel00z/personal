@@ -1,0 +1,24 @@
+export const meta = {
+  title: 'Build-time search for MDX content',
+  description:
+    'We generate a client-side search index during build, using the same webpack-loader pattern from the latest work.',
+  date: '2025-12-14',
+  tags: ['engineering', 'search', 'mdx'],
+  authors: [{ name: 'Template team' }],
+};
+
+Search is most useful when it feels instant. For this blog we generate an index at build time, so the UI can search locally without round-trips.
+
+## What gets indexed
+
+We index headings and paragraphs so results are meaningful and deep-linkable.
+
+## Keeping posts clean
+
+We avoid using a top-level markdown horizontal rule so our changelog-specific MDX wrapping logic does not kick in for blog posts.
+
+## Minimal API surface
+
+The index exposes a single `search(query)` function that returns hits with URLs and titles.
+
+

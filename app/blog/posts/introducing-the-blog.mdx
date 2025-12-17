@@ -1,0 +1,42 @@
+import { Logo } from '@/src/components/site/Logo';
+
+export const meta = {
+  title: 'Introducing the blog',
+  description:
+    'A Spotlight-style MDX blog inside our Next app: local files, clean templates, and fast iteration.',
+  date: '2025-12-14',
+  tags: ['product', 'engineering', 'mdx'],
+  image: '/logo.svg',
+  authors: [{ name: 'Template team' }],
+};
+
+This blog is built from plain `.mdx` files inside the repo — no external CMS. That means writing is as easy as creating a new file, and shipping is as easy as merging a PR.
+
+<div className="mt-6 flex items-center justify-center overflow-hidden rounded-2xl border border-border/50 bg-surface/20 p-8">
+  <Logo size="10xl" label="Logo mark" />
+</div>
+
+## What you get
+
+- A `/blog` index with a featured post, tags, and search.
+- A `/blog/[slug]` post page with good typography and MDX components.
+- `/blog/tags` and `/blog/tags/[tag]` for browsing by topic.
+- RSS + sitemap + robots so it behaves like a real blog.
+
+## MDX is code (when you need it)
+
+Because this is MDX, you can embed small UI bits when it actually helps.
+
+```ts
+export const meta = {
+  title: 'My post',
+  date: '2025-12-14',
+  tags: ['notes'],
+}
+```
+
+## A practical writing workflow
+
+Write the post. Add `meta`. Push. Done.
+
+
