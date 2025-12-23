@@ -5,6 +5,10 @@
   </picture>
 </p>
 
+<p align="center">
+  <img alt="Demo" src="./.github/demo.gif" width="900" />
+</p>
+
 <h1 align="center">personal-site</h1>
 
 <p align="center">
