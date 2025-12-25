@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type React from 'react';
+import { CodeBlock } from '@/src/components/mdx/CodeBlock';
 import { Logo } from '@/src/components/site/Logo';
 
 function formatDate(value: unknown): string | null {
@@ -120,12 +121,7 @@ export function kbd(props: React.ComponentPropsWithoutRef<'kbd'>) {
 }
 
 export function pre(props: React.ComponentPropsWithoutRef<'pre'>) {
-  return (
-    <pre
-      {...props}
-      className={`mt-6 overflow-x-auto rounded-xl border border-border/50 bg-surface/20 p-4 text-sm text-fg first:mt-0 ${props.className ?? ''}`}
-    />
-  );
+  return <CodeBlock {...props} />;
 }
 
 export function code(props: React.ComponentPropsWithoutRef<'code'>) {
